@@ -1,0 +1,11 @@
+Construir y levantar el contenedor:
+docker.compose up --build
+
+
+comandod e conexion:
+docker exec -it 88c /bin/sh
+
+
+mosquitto_sub -h localhost -t test -u admin -P lokodeldiablo
+mosquitto_pub -h 192.168.140.170 -t test -u admin -P lokodeldiablo -m "hola"
+-------------

@@ -1,0 +1,42 @@
+Paso a Paso para Configurar react-native-vector-icons
+
+1. Instalar react-native-vector-icons
+Abre la terminal y navega hasta la carpeta de tu proyecto React Native.
+
+Ejecuta uno de los siguientes comandos según prefieras usar npm:
+
+Coando con npm:
+npm install react-native-vector-icons
+
+2. Configuración Específica para Android
+Editar android/app/build.gradle:
+
+Abre el archivo build.gradle que se encuentra dentro de la carpeta android/app.
+
+Añade la siguiente línea al final del archivo:
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+
+Reconstruye tu aplicación para que los cambios surtan efecto.
+
+npx start
+
+A disfrutar de los iconos gratis
+
+Podeis ver el nombre e icnos gratis aqui:
+https://ionic.io/ionicons
+
+
+
+Este paso es opcional.................
+--------------------------------------
+
+Personalización de las Fuentes (Opcional):
+
+Si deseas incluir solo ciertas fuentes de iconos, puedes especificarlo así:
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ] // Especifica los archivos de fuente
+]
+
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+
+
